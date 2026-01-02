@@ -1,5 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using EntropyFlavourPack.Defs;
+using HarmonyLib;
+using LudeonTK;
 using RimWorld;
 using Verse;
 
@@ -7,10 +12,16 @@ namespace EntropyFlavourPack
 {
     public class ResearchPaperDecayComponent : GameComponent
     {
+        private Type CompResearchPaperType = null;
+        private FieldInfo ProjectsFieldInfo;
+        private MethodInfo TryGetCompResearchPaperMethod = null;
+
+        public List<string> translationKeyCollection;
+
         private const int MinDaysBetweenDecay = 10;
         private const int MaxDaysBetweenDecay = 15;
         private const int TicksPerDay = 60000;
-        
+
         private int ticksUntilNextDecay;
         private int nextDecayInterval;
 
@@ -18,6 +29,16 @@ namespace EntropyFlavourPack
         {
             this.nextDecayInterval = GetRandomDecayInterval();
             this.ticksUntilNextDecay = this.nextDecayInterval;
+            this.translationKeyCollection = DefDatabase<TranslationKeyCollectionDef>.GetNamed("EntropyFlavourPack_ResearchPaperDecayMessages").translationKeys;
+
+            this.CompResearchPaperType = AccessTools.TypeByName("CompResearchPaper");
+
+            if (this.CompResearchPaperType == null) return;
+            this.ProjectsFieldInfo = AccessTools.Field(AccessTools.TypeByName("CompResearchPaper"), "projects");
+
+            this.TryGetCompResearchPaperMethod = typeof(ThingCompUtility)
+                .GetMethods(BindingFlags.Static | BindingFlags.Public)
+                .FirstOrDefault(m => m.Name == "TryGetComp" && m.IsGenericMethod)?.MakeGenericMethod(CompResearchPaperType);
         }
 
         private int GetRandomDecayInterval()
@@ -28,7 +49,7 @@ namespace EntropyFlavourPack
         public override void GameComponentTick()
         {
             base.GameComponentTick();
-            
+
             if (ticksUntilNextDecay > 0)
             {
                 ticksUntilNextDecay--;
@@ -44,97 +65,63 @@ namespace EntropyFlavourPack
 
         private string GetRandomDecayMessage(string paperLabel)
         {
-            List<string> messageKeys = new List<string>
-            {
-                "EntropyFlavourPack_DecayMessage_Damp",
-                "EntropyFlavourPack_DecayMessage_Insects",
-                "EntropyFlavourPack_DecayMessage_Fire",
-                "EntropyFlavourPack_DecayMessage_Fade",
-                "EntropyFlavourPack_DecayMessage_Crumble",
-                "EntropyFlavourPack_DecayMessage_Spill",
-                "EntropyFlavourPack_DecayMessage_Rodents"
-            };
-            
-            string randomKey = messageKeys.RandomElement();
+            string randomKey = translationKeyCollection.RandomElement();
             return randomKey.Translate(paperLabel).ToString();
         }
 
         private TechLevel GetPaperTechLevel(Thing paper)
         {
-            var compsProperty = typeof(ThingWithComps).GetProperty("AllComps", 
-                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
-            
-            if (compsProperty != null && paper is ThingWithComps thingWithComps)
+            if (this.TryGetCompResearchPaperMethod.Invoke(null, [paper]) is not ThingComp comp ||
+                this.ProjectsFieldInfo?.GetValue(comp) is not List<ResearchProjectDef> { Count: > 0 } projects) return TechLevel.Undefined;
+
+            TechLevel highestTech = TechLevel.Undefined;
+            foreach (ResearchProjectDef project in projects)
             {
-                var comps = compsProperty.GetValue(thingWithComps) as List<ThingComp>;
-                if (comps != null)
+                if (project != null && project.techLevel > highestTech)
                 {
-                    foreach (var comp in comps)
-                    {
-                        if (comp.GetType().Name == "CompResearchPaper")
-                        {
-                            var projectsField = comp.GetType().GetField("projects");
-                            if (projectsField != null)
-                            {
-                                var projects = projectsField.GetValue(comp) as List<ResearchProjectDef>;
-                                if (projects != null && projects.Count > 0)
-                                {
-                                    TechLevel highestTech = TechLevel.Undefined;
-                                    foreach (var project in projects)
-                                    {
-                                        if (project != null && project.techLevel > highestTech)
-                                        {
-                                            highestTech = project.techLevel;
-                                        }
-                                    }
-                                    return highestTech;
-                                }
-                            }
-                            break;
-                        }
-                    }
+                    highestTech = project.techLevel;
                 }
             }
-            
-            return TechLevel.Undefined;
+
+            return highestTech;
+
         }
 
         private void TryDecayResearchPaper()
         {
-            List<Thing> allPapers = new List<Thing>();
-            
+            if (EntropyFlavourPackDefOf.ResearchPaper == null) return;
+            List<Thing> allPapers = [];
+
             foreach (Map map in Find.Maps)
             {
-                if (map == null || !map.IsPlayerHome)
+                if (map is not { IsPlayerHome: true })
                     continue;
 
-                var papers = map.listerThings.AllThings
-                    .Where(t => t.def.defName == "ResearchPaper" && !t.Destroyed)
+                List<Thing> papers = map.listerThings.ThingsOfDef(EntropyFlavourPackDefOf.ResearchPaper)
+                    .Where(t => !t.Destroyed)
                     .ToList();
-                
+
                 allPapers.AddRange(papers);
             }
 
-            if (allPapers.Count == 0)
-            {
-                return;
-            }
+            if (allPapers.Count == 0) return;
 
-            Dictionary<TechLevel, List<Thing>> papersByTechLevel = new Dictionary<TechLevel, List<Thing>>();
-            
-            foreach (var paper in allPapers)
+            Dictionary<TechLevel, List<Thing>> papersByTechLevel = new();
+
+            foreach (Thing paper in allPapers)
             {
                 TechLevel techLevel = GetPaperTechLevel(paper);
-                
+
                 if (!papersByTechLevel.ContainsKey(techLevel))
                 {
-                    papersByTechLevel[techLevel] = new List<Thing>();
+                    papersByTechLevel[techLevel] = [];
                 }
+
                 papersByTechLevel[techLevel].Add(paper);
             }
 
             TechLevel highestTechLevel = TechLevel.Undefined;
-            foreach (var techLevel in papersByTechLevel.Keys)
+            foreach (TechLevel techLevel in papersByTechLevel.Keys)
             {
                 if (techLevel > highestTechLevel)
                 {
@@ -143,30 +130,35 @@ namespace EntropyFlavourPack
             }
 
             List<Thing> highestTechPapers = papersByTechLevel[highestTechLevel];
-            
-            if (highestTechPapers.Count == 0)
-            {
-                return;
-            }
+
+            if (highestTechPapers.Count == 0) return;
 
             Thing paperToDestroy = highestTechPapers.RandomElement();
-            
-            if (paperToDestroy != null)
+            if (paperToDestroy == null) return;
+
+            string paperLabel = paperToDestroy.Label;
+            Map paperMap = paperToDestroy.Map;
+
+            paperToDestroy.Destroy(DestroyMode.Vanish);
+
+            string letterLabel = "EntropyFlavourPack_DecayLetterLabel".Translate();
+            string letterText = GetRandomDecayMessage(paperLabel);
+
+            Find.LetterStack.ReceiveLetter(
+                letterLabel,
+                letterText,
+                LetterDefOf.NegativeEvent,
+                new LookTargets(paperToDestroy.Position, paperMap)
+            );
+        }
+
+        [DebugAction("Entropy Flavour Pack", "Trigger Research Paper Decay")]
+        public static void TriggerResearchPaperDecayNextTick()
+        {
+            ResearchPaperDecayComponent component = Current.Game.GetComponent<ResearchPaperDecayComponent>();
+            if (component != null)
             {
-                string paperLabel = paperToDestroy.Label;
-                Map paperMap = paperToDestroy.Map;
-                
-                paperToDestroy.Destroy(DestroyMode.Vanish);
-                
-                string letterLabel = "EntropyFlavourPack_DecayLetterLabel".Translate();
-                string letterText = GetRandomDecayMessage(paperLabel);
-                
-                Find.LetterStack.ReceiveLetter(
-                    letterLabel,
-                    letterText,
-                    LetterDefOf.NegativeEvent,
-                    new LookTargets(paperToDestroy.Position, paperMap)
-                );
+                component.ticksUntilNextDecay = 0;
             }
         }
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
+        <defName>EntropyFlavourPack_ResearchPaperDecayMessages</defName>
+        <translationKeys>
+            <li>EntropyFlavourPack_DecayMessage_Damp</li>
+            <li>EntropyFlavourPack_DecayMessage_Insects</li>
+            <li>EntropyFlavourPack_DecayMessage_Fade</li>
+            <li>EntropyFlavourPack_DecayMessage_Rodents</li>
+        </translationKeys>
+    </EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
+</Defs>
