@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Entropy Flavour Pack</name>
-  <author>YourName</author>
+  <author>MrSamuelStreamer</author>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <packageId>entropy.flavourpack</packageId>
+  <packageId>mss.entropyflavourpack</packageId>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
