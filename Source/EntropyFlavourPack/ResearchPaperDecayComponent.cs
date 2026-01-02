@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using EntropyFlavourPack.Defs;
-using HarmonyLib;
 using LudeonTK;
+using ResearchPapers;
 using RimWorld;
 using Verse;
 
@@ -12,10 +10,6 @@ namespace EntropyFlavourPack
 {
     public class ResearchPaperDecayComponent : GameComponent
     {
-        private Type CompResearchPaperType = null;
-        private FieldInfo ProjectsFieldInfo;
-        private MethodInfo TryGetCompResearchPaperMethod = null;
-
         public List<string> translationKeyCollection;
 
         private const int MinDaysBetweenDecay = 10;
@@ -30,15 +24,6 @@ namespace EntropyFlavourPack
             this.nextDecayInterval = GetRandomDecayInterval();
             this.ticksUntilNextDecay = this.nextDecayInterval;
             this.translationKeyCollection = DefDatabase<TranslationKeyCollectionDef>.GetNamed("EntropyFlavourPack_ResearchPaperDecayMessages").translationKeys;
-
-            this.CompResearchPaperType = AccessTools.TypeByName("CompResearchPaper");
-
-            if (this.CompResearchPaperType == null) return;
-            this.ProjectsFieldInfo = AccessTools.Field(AccessTools.TypeByName("CompResearchPaper"), "projects");
-
-            this.TryGetCompResearchPaperMethod = typeof(ThingCompUtility)
-                .GetMethods(BindingFlags.Static | BindingFlags.Public)
-                .FirstOrDefault(m => m.Name == "TryGetComp" && m.IsGenericMethod)?.MakeGenericMethod(CompResearchPaperType);
         }
 
         private int GetRandomDecayInterval()
@@ -71,11 +56,10 @@ namespace EntropyFlavourPack
 
         private TechLevel GetPaperTechLevel(Thing paper)
         {
-            if (this.TryGetCompResearchPaperMethod.Invoke(null, [paper]) is not ThingComp comp ||
-                this.ProjectsFieldInfo?.GetValue(comp) is not List<ResearchProjectDef> { Count: > 0 } projects) return TechLevel.Undefined;
+            if (paper.TryGetComp<CompResearchPaper>() is not { } paperComp || paperComp.projects.NullOrEmpty()) return TechLevel.Undefined;
 
             TechLevel highestTech = TechLevel.Undefined;
-            foreach (ResearchProjectDef project in projects)
+            foreach (ResearchProjectDef project in paperComp.projects)
             {
                 if (project != null && project.techLevel > highestTech)
                 {
@@ -84,7 +68,6 @@ namespace EntropyFlavourPack
             }
 
             return highestTech;
-
         }
 
         private void TryDecayResearchPaper()
