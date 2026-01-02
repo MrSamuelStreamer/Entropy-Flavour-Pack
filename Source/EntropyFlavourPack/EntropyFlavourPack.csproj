@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <RimWorldVersion>1.6</RimWorldVersion>
+        <GameFolder>d:\steam\steamapps\common\RimWorld</GameFolder>
+        <OutputPath>..\..\$(RimWorldVersion)\Assemblies</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="$(RimWorldVersion).*" />
+        <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
+    </ItemGroup>
+
+</Project>
+
