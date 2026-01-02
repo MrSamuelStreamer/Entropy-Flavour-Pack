@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EntropyFlavourPack_DecayLetterLabel>Research Paper Decay</EntropyFlavourPack_DecayLetterLabel>
+  <EntropyFlavourPack_DecayMessage_Damp>Damp has gotten into the knowledge stores and destroyed {0}. Its secrets have been lost to moisture and mold.</EntropyFlavourPack_DecayMessage_Damp>
+  <EntropyFlavourPack_DecayMessage_Insects>An aggressive insect hive has eaten through {0} and its secrets have been lost!</EntropyFlavourPack_DecayMessage_Insects>
+  <EntropyFlavourPack_DecayMessage_Fade>The ink on {0} has mysteriously faded beyond recognition. The knowledge it contained is now illegible.</EntropyFlavourPack_DecayMessage_Fade>
+  <EntropyFlavourPack_DecayMessage_Rodents>Rodents have nested in the archives and shredded {0} for bedding material. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents>
+</LanguageData>
