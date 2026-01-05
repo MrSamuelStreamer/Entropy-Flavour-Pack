@@ -3,5 +3,6 @@
 	<v1.6>
 		<li>Common</li>
 		<li>1.6</li>
+		<li IfModActive="anthitei.athsstyleableframework.style">Compatibility/anthitei.athsstyleableframework.style/1.6</li>
 	</v1.6>
 </loadFolders>

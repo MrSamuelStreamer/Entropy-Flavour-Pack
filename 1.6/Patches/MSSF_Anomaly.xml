@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Forest Tribe -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeRough"]/label</xpath>
+		<value>
+			<label>Forest Kokiri</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeRough"]/description</xpath>
+		<value>
+			<description>The Forest Kokiri are a group of loosely affiliated Kokiri tribes that live primarily in the grand woods of Hephaestus. They are proud and extremely protective of their forest homes, and will be quick to come to its defence if threatened.\n\nIn combat they will favour ranged weapons and will often fight alongside the planets native fauna.</description>
+		</value>
+	</Operation>
+	<!-- Water Tribe -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeSavage"]/label</xpath>
+		<value>
+			<label>Zora Kokiri</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeSavage"]/description</xpath>
+		<value>
+			<description>The Zora Kokiri make their homes at the shore and exist in harmony with the grand oceans of the planet. They are specially adapted to life in the water, and are unrivaled in aquatic survival.\n\n\Thanks to their more powerful limbs, they favour close-range melee combat, and have little use for ranged weapons.</description>
+		</value>
+	</Operation>
+	<!-- Ash Tribe-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeSavageImpid"]/label</xpath>
+		<value>
+			<label>Ash Kokiri</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeSavageImpid"]/description</xpath>
+		<value>
+			<description>The Ash Kokiri are a group of tribes that live in the volcanic regions of the planet. They are well adapted to the harsh conditions of the ashlands, and showcase exceptional resilience and strength.\n\nThey are renowned for their their brutal combat approach and savage attitude towards outsiders.</description>
+		</value>
+	</Operation>
+	<!-- Deep Tribe-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeCannibal"]/label</xpath>
+		<value>
+			<label>Deep Kokiri</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeCannibal"]/description</xpath>
+		<value>
+			<description>The Deep Kokiri are a group of tribes that live in the deep caverns and underground regions of the planet. They are viewed with extreme distrust and suspicion by all other beings on the planet, Kokiri or otherwise.\n\nIt is believed that they possess some form of dark magical abilities.</description>
+		</value>
+	</Operation>
+</Patch>

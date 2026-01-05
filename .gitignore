@@ -39,3 +39,4 @@ Source/bin/
 *.bak
 *~
 
+.github/copilot-instructions.md

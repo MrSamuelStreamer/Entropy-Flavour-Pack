@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <XenotypeDef>
+    <defName>MSSE_DeepKokiri</defName>
+    <label>Deep Kokiri</label>
+    <description>Deep Kokiri</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>Xenotypes/BS_OniOneHorn</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="redmattis.bigsmall.core">BS_LargeFrame</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SlowAging</li>
+      <li MayRequire="sarg.alphagenes">AG_ForsakenBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PlainLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_VFEI_PredatorStomach</li>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+      <li>PsychicBonding</li>
+      <li MayRequire="redmattis.bigsmall.core">VU_Darkness_MoveSpeed_Quick</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxResist_Vulnerability</li>
+      <li>UVSensitivity_Mild</li>
+      <li MayRequire="redmattis.bigsmall.core">VU_DarknessMelee_Strong</li>
+      <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
+      <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
+      <li>Tail_Smooth</li>
+      <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
+      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
+      <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Body_Standard</li>
+      <li>Hair_MidBlack</li>
+      <li>Hair_DarkBlack</li>
+      <li>Hair_InkBlack</li>
+      <li MayRequire="sarg.alphagenes">AG_Skin_DeepBlue</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_Skin_DarkAsh</li>
+      <li MayRequire="redmattis.bigsmall.core">Undergrounder</li>
+      <li>DarkVision</li>
+      <li>Hair_Grayless</li>
+      <li>ElongatedFingers</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>MSSE_AshKokiri</defName>
+    <label>Ash Kokiri</label>
+    <description>Ash Kokiri</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>Xenotypes/BS_Oni</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="redmattis.bigsmall.core">BS_LargeFrame</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SlowAging</li>
+      <li MayRequire="sarg.alphagenes">AG_ForsakenBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PlainLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_VFEI_PredatorStomach</li>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+      <li MayRequire="sarg.alphagenes">AG_FireObsession</li>
+      <li>PsychicBonding</li>
+      <li>MaxTemp_SmallIncrease</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxResist_Vulnerability</li>
+      <li>MeleeDamage_Strong</li>
+      <li MayRequire="sarg.alphagenes">AG_Rowdy</li>
+      <li>Robust</li>
+      <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
+      <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
+      <li>Tail_Smooth</li>
+      <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
+      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
+      <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Body_Standard</li>
+      <li>Hair_MidBlack</li>
+      <li>Hair_DarkBlack</li>
+      <li>Hair_InkBlack</li>
+      <li>Skin_Blue</li>
+      <li MayRequire="sarg.alphagenes">AG_Skin_DeepBlue</li>
+      <li>Hair_Grayless</li>
+      <li>ElongatedFingers</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>MSSE_ZoraKokiri</defName>
+    <label>Zora Kokiri</label>
+    <description>Zora Kokiri</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>Xenotypes/BS_NekoTrick</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="vanillaracesexpanded.phytokin">VRE_AnimaAffinity</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_LargeFrame</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SlowAging</li>
+      <li MayRequire="sarg.alphagenes">AG_ForsakenBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PlainLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_VFEI_PredatorStomach</li>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+      <li>PsychicBonding</li>
+      <li>WebbedPhalanges</li>
+      <li MayRequire="sarg.alphagenes">AG_WaterStriding</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxResist_Vulnerability</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxicEnvironmentResistance_Frail</li>
+      <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
+      <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
+      <li>Tail_Smooth</li>
+      <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
+      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
+      <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Body_Standard</li>
+      <li>Hair_MidBlack</li>
+      <li>Hair_DarkBlack</li>
+      <li>Hair_InkBlack</li>
+      <li>Skin_Blue</li>
+      <li MayRequire="sarg.alphagenes">AG_Skin_DeepBlue</li>
+      <li>Hair_Grayless</li>
+      <li>ElongatedFingers</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>MSSE_Kokiri</defName>
+    <label>Kokiri</label>
+    <description>Base Kokiri</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>Xenotypes/BS_Neko</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="vanillaracesexpanded.phytokin">VRE_AnimaAffinity</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_LargeFrame</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SlowAging</li>
+      <li MayRequire="sarg.alphagenes">AG_ForsakenBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PlainLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_VFEI_PredatorStomach</li>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+      <li>PsychicBonding</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxResist_Vulnerability</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxicEnvironmentResistance_Frail</li>
+      <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
+      <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
+      <li>Tail_Smooth</li>
+      <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
+      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
+      <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Body_Standard</li>
+      <li>Hair_MidBlack</li>
+      <li>Hair_DarkBlack</li>
+      <li>Hair_InkBlack</li>
+      <li>Skin_Blue</li>
+      <li MayRequire="sarg.alphagenes">AG_Skin_DeepBlue</li>
+      <li>Hair_Grayless</li>
+      <li>ElongatedFingers</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+    </genes>
+  </XenotypeDef>
+</Defs>
