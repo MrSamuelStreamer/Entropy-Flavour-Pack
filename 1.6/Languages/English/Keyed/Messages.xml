@@ -6,6 +6,10 @@
     <EntropyFlavourPack_DecayMessage_Insects>An aggressive insect hive has eaten through {0} and its secrets have been lost!</EntropyFlavourPack_DecayMessage_Insects>
     <EntropyFlavourPack_DecayMessage_Fade>The ink on {0} has mysteriously faded beyond recognition. The knowledge it contained is now illegible.</EntropyFlavourPack_DecayMessage_Fade>
     <EntropyFlavourPack_DecayMessage_Rodents>Rodents have nested in the archives and shredded {0} for bedding material. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents>
+    <EntropyFlavourPack_DecayMessage_CleanUpSpill>{PAWN_nameDef} spilled their drink near a bookshelf. In {PAWN_possessive} haste, {PAWN_pronoun} used "{0}" to soak up the spill, rendering it unreadable.</EntropyFlavourPack_DecayMessage_CleanUpSpill>
+    <EntropyFlavourPack_DecayMessage_TP>{PAWN_nameDef} was caught short. In {PAWN_possessive} haste, {PAWN_pronoun} grabbed "{0}" to wipe with, leaving it a smeared useless mess.</EntropyFlavourPack_DecayMessage_TP>
+    <EntropyFlavourPack_DecayMessage_PaperAirplane>{PAWN_nameDef} was making paper airplanes. While not paying attention, {PAWN_pronoun} grabbed "{0}". The plane flew straight out the window and into a dirty puddle, soaking away any ink and leaving it blank and muddy.</EntropyFlavourPack_DecayMessage_PaperAirplane>
+
     <!-- Tech Regression System -->
     <EntropyFlavourPack_TechRegressionTitle>Knowledge Lost - Choose Your Burden</EntropyFlavourPack_TechRegressionTitle>
     <EntropyFlavourPack_TechRegressionDesc>Your colony's technological understanding has regressed. The loss of knowledge brings consequences. Choose which burden your people must bear.</EntropyFlavourPack_TechRegressionDesc>

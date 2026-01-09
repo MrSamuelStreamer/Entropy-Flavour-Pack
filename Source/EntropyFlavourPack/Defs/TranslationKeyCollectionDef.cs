@@ -5,5 +5,5 @@ namespace EntropyFlavourPack.Defs;
 
 public class TranslationKeyCollectionDef : Def
 {
-    public List<string> translationKeys = [];
+    public List<StringChance> translationKeys = [];
 }

@@ -5,13 +5,14 @@ using LudeonTK;
 using ResearchPapers;
 using RimWorld;
 using Verse;
+using Verse.AI;
 using VFETribals;
 
 namespace EntropyFlavourPack
 {
     public class ResearchPaperDecayComponent : GameComponent
     {
-        public List<string> translationKeyCollection;
+        public List<StringChance> translationKeyCollection;
 
         private const int MinDaysBetweenDecay = 10;
         private const int MaxDaysBetweenDecay = 15;
@@ -60,10 +61,10 @@ namespace EntropyFlavourPack
                 TryShowNegativeCornerstoneWindow();
         }
 
-        private string GetRandomDecayMessage(string paperLabel)
+        private string GetRandomDecayMessage(string paperLabel, Pawn nearbyPawn)
         {
-            string randomKey = translationKeyCollection.RandomElement();
-            return randomKey.Translate(paperLabel).ToString();
+            string randomKey = translationKeyCollection.RandomElementByWeight(el=>el.weight).key;
+            return randomKey.Translate(paperLabel, nearbyPawn.Named("PAWN")).ToString();
         }
 
         private TechLevel GetPaperTechLevel(Thing paper)
@@ -134,6 +135,8 @@ namespace EntropyFlavourPack
             if (paperToDestroy == null)
                 return;
 
+            Pawn nearbyPawn = paperToDestroy.Map.mapPawns.FreeColonistsSpawned.OrderBy(p => p.Position.DistanceTo(paperToDestroy.Position)).FirstOrDefault() ?? paperToDestroy.Map.mapPawns.FreeColonistsSpawned.RandomElement();
+
             string paperLabel = paperToDestroy.Label;
             Map paperMap = paperToDestroy.Map;
             TechLevel destroyedPaperTechLevel = GetPaperTechLevel(paperToDestroy);
@@ -141,7 +144,7 @@ namespace EntropyFlavourPack
             paperToDestroy.Destroy(DestroyMode.Vanish);
 
             string letterLabel = "EntropyFlavourPack_DecayLetterLabel".Translate();
-            string letterText = GetRandomDecayMessage(paperLabel);
+            string letterText = GetRandomDecayMessage(paperLabel, nearbyPawn);
 
             Find.LetterStack.ReceiveLetter(letterLabel, letterText, LetterDefOf.NegativeEvent, new LookTargets(paperToDestroy.Position, paperMap));
 

@@ -3,10 +3,30 @@
     <EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
         <defName>EntropyFlavourPack_ResearchPaperDecayMessages</defName>
         <translationKeys>
-            <li>EntropyFlavourPack_DecayMessage_Damp</li>
-            <li>EntropyFlavourPack_DecayMessage_Insects</li>
-            <li>EntropyFlavourPack_DecayMessage_Fade</li>
-            <li>EntropyFlavourPack_DecayMessage_Rodents</li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_Damp</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_Insects</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_Fade</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_Rodents</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_CleanUpSpill</key>
+                <weight>0.5</weight>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_TP</key>
+                <weight>0.1</weight>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_PaperAirplane</key>
+                <weight>0.1</weight>
+            </li>
         </translationKeys>
     </EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
 </Defs>
