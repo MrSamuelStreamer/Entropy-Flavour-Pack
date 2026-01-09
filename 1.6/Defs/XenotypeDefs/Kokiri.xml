@@ -3,7 +3,7 @@
   <XenotypeDef>
     <defName>MSSE_DeepKokiri</defName>
     <label>Deep Kokiri</label>
-    <description>Deep Kokiri</description>
+    <description>The Deep Kokiri are a group of tribes that live in the deep caverns and underground regions of the planet. They are viewed with extreme distrust and suspicion by all other beings on the planet, Kokiri or otherwise.\n\nIt is believed that they possess some form of dark magical abilities.</description>
     <descriptionShort></descriptionShort>
     <iconPath>Xenotypes/BS_OniOneHorn</iconPath>
     <inheritable>true</inheritable>
@@ -22,10 +22,9 @@
       <li MayRequire="redmattis.bigsmall.core">VU_DarknessMelee_Strong</li>
       <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
       <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
-      <li>Tail_Smooth</li>
+      <li>AFU_BA_RatTail</li>
       <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
       <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
-      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
       <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
       <li>Beard_NoBeardOnly</li>
       <li>Body_Standard</li>
@@ -38,12 +37,14 @@
       <li>DarkVision</li>
       <li>Hair_Grayless</li>
       <li>ElongatedFingers</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Golden</li>
+      <li>Large</li>
     </genes>
   </XenotypeDef>
   <XenotypeDef>
     <defName>MSSE_AshKokiri</defName>
     <label>Ash Kokiri</label>
-    <description>Ash Kokiri</description>
+    <description>The Ash Kokiri are a group of tribes that live in the volcanic regions of the planet. They are well adapted to the harsh conditions of the ashlands, and showcase exceptional resilience and strength.\n\nThey are renowned for their their brutal combat approach and savage attitude towards outsiders.</description>
     <descriptionShort></descriptionShort>
     <iconPath>Xenotypes/BS_Oni</iconPath>
     <inheritable>true</inheritable>
@@ -64,10 +65,9 @@
       <li>Robust</li>
       <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
       <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
-      <li>Tail_Smooth</li>
+      <li>AFU_BA_RatTail</li>
       <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
       <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
-      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
       <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
       <li>Beard_NoBeardOnly</li>
       <li>Body_Standard</li>
@@ -80,12 +80,15 @@
       <li>ElongatedFingers</li>
       <li>AptitudeTerrible_Mining</li>
       <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Golden</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Orange</li>
+      <li>Large</li>
     </genes>
   </XenotypeDef>
   <XenotypeDef>
     <defName>MSSE_ZoraKokiri</defName>
     <label>Zora Kokiri</label>
-    <description>Zora Kokiri</description>
+    <description>The Zora Kokiri make their homes at the shore and exist in harmony with the grand oceans of the planet. They are specially adapted to life in the water, and are unrivaled in aquatic survival.\n\n\Thanks to their more powerful limbs, they favour close-range melee combat, and have little use for ranged weapons.</description>
     <descriptionShort></descriptionShort>
     <iconPath>Xenotypes/BS_NekoTrick</iconPath>
     <inheritable>true</inheritable>
@@ -105,10 +108,9 @@
       <li MayRequire="sarg.alphagenes">AG_ToxicEnvironmentResistance_Frail</li>
       <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
       <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
-      <li>Tail_Smooth</li>
+      <li>AFU_BA_RatTail</li>
       <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
       <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
-      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
       <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
       <li>Beard_NoBeardOnly</li>
       <li>Body_Standard</li>
@@ -121,12 +123,15 @@
       <li>ElongatedFingers</li>
       <li>AptitudeTerrible_Mining</li>
       <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Blue</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Green</li>
+      <li>Large</li>
     </genes>
   </XenotypeDef>
   <XenotypeDef>
     <defName>MSSE_Kokiri</defName>
-    <label>Kokiri</label>
-    <description>Base Kokiri</description>
+    <label>Forest Kokiri</label>
+    <description>The Forest Kokiri are a group of loosely affiliated Kokiri tribes that live primarily in the grand woods of Hephaestus. They are proud and extremely protective of their forest homes, and will be quick to come to its defence if threatened.\n\nIn combat they will favour ranged weapons and will often fight alongside the planets native fauna.</description>
     <descriptionShort></descriptionShort>
     <iconPath>Xenotypes/BS_Neko</iconPath>
     <inheritable>true</inheritable>
@@ -144,10 +149,9 @@
       <li MayRequire="sarg.alphagenes">AG_ToxicEnvironmentResistance_Frail</li>
       <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
       <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
-      <li>Tail_Smooth</li>
+      <li>AFU_BA_RatTail</li>
       <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
       <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
-      <li MayRequire="sarg.alphagenes">AG_DevilEyes</li>
       <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
       <li>Beard_NoBeardOnly</li>
       <li>Body_Standard</li>
@@ -155,11 +159,101 @@
       <li>Hair_DarkBlack</li>
       <li>Hair_InkBlack</li>
       <li>Skin_Blue</li>
-      <li MayRequire="sarg.alphagenes">AG_Skin_DeepBlue</li>
       <li>Hair_Grayless</li>
       <li>ElongatedFingers</li>
       <li>AptitudeTerrible_Mining</li>
       <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Golden</li>
+      <li>Large</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>MSSE_FungalKokiri</defName>
+    <label>Fungal Kokiri</label>
+    <description>Fungal Kokiri</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/AG_Mycomorph</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="vanillaracesexpanded.phytokin">VRE_AnimaAffinity</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_LargeFrame</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SlowAging</li>
+      <li MayRequire="sarg.alphagenes">AG_ForsakenBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PlainLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_VFEI_PredatorStomach</li>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+      <li MayRequire="sarg.alphagenes">AG_FungalSkin</li>
+      <li>PsychicBonding</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxResist_Vulnerability</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxicEnvironmentResistance_Frail</li>
+      <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
+      <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
+      <li>AFU_BA_RatTail</li>
+      <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
+      <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Body_Standard</li>
+      <li>Hair_MidBlack</li>
+      <li>Hair_DarkBlack</li>
+      <li>Hair_InkBlack</li>
+      <li>Skin_Purple</li>
+      <li MayRequire="sarg.alphagenes">AG_Skin_DeepPurple</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_LightPurple</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_SkyBlue</li>
+      <li MayRequire="sarg.alphagenes">AG_FungalClumps</li>
+      <li MayRequire="sarg.alphagenes">AG_FungalSprout</li>
+      <li MayRequire="sarg.alphagenes">AG_FungalTentacles</li>
+      <li>Hair_Grayless</li>
+      <li>ElongatedFingers</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+      <li>ChemicalDependency_AB_PsychotropicFungus</li>
+      <li>Large</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>MSSE_FrostKokiri</defName>
+    <label>Frost Kokiri</label>
+    <description>Frost Kokiri</description>
+    <descriptionShort></descriptionShort>
+    <iconPath>Xenotypes/BS_Kitsune</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li MayRequire="redmattis.bigsmall.core">BS_LargeFrame</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SlowAging</li>
+      <li MayRequire="sarg.alphagenes">AG_ForsakenBlood</li>
+      <li MayRequire="sarg.alphagenes">AG_PlainLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_VFEI_PredatorStomach</li>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+      <li MayRequire="sarg.alphagenes">AG_FrostbiteResistance</li>
+      <li>PsychicBonding</li>
+      <li>MinTemp_LargeDecrease</li>
+      <li>MaxTemp_SmallDecrease</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxResist_Vulnerability</li>
+      <li MayRequire="sarg.alphagenes">AG_ToxicEnvironmentResistance_Frail</li>
+      <li MayRequire="sarg.alphagenes">AG_ReducedFertile</li>
+      <li MayRequire="sarg.alphagenes">AG_SlowGestation</li>
+      <li>AFU_BA_RatTail</li>
+      <li MayRequire="sarg.alphagenes">AG_AnimusEars</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_AlienApperanceStandards</li>
+      <li MayRequire="rooboid.dreadlockhairshd">Hair_DreadlocksOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Body_Standard</li>
+      <li>Hair_MidBlack</li>
+      <li>Hair_DarkBlack</li>
+      <li>Hair_InkBlack</li>
+      <li>Skin_Blue</li>
+      <li MayRequire="redmattis.bigsmall.core">BS_SkinFrostWhite</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Golden</li>
+      <li MayRequire="oppey.eyegenes2">Eyes_Silver</li>
+      <li>Hair_Grayless</li>
+      <li>ElongatedFingers</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li MayRequire="sarg.alphagenes">AG_MiningYield_Low</li>
+      <li>Large</li>
     </genes>
   </XenotypeDef>
 </Defs>

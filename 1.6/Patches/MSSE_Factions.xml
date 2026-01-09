@@ -52,4 +52,30 @@
 			<description>The Deep Kokiri are a group of tribes that live in the deep caverns and underground regions of the planet. They are viewed with extreme distrust and suspicion by all other beings on the planet, Kokiri or otherwise.\n\nIt is believed that they possess some form of dark magical abilities.</description>
 		</value>
 	</Operation>
+	<!-- Fungus Tribe-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="NudistTribe"]/label</xpath>
+		<value>
+			<label>Fungal Kokiri</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="NudistTribe"]/description</xpath>
+		<value>
+			<description>The Fungal Kokiri are a group of tribes that live in the Glowshroom forests and mycotic groves of the planet. Extreme in their beliefs, they have willingly allowed the mycotic life to take root in their bodies, acting as a form of symbiosis - though they can never leave their mushroom homes, they gain increased vigour.\n\nOther Kokiri are often wary but highly respectful of the Fungal Kokiri due to their extreme devotion to harmony with the world.</description>
+		</value>
+	</Operation>
+	<!-- Ice Tribe-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeRoughNeanderthal"]/label</xpath>
+		<value>
+			<label>Frost Kokiri</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/FactionDef[defName="TribeRoughNeanderthal"]/description</xpath>
+		<value>
+			<description>The Frost Kokiri are a group of tribes that live in the frozen tundra and the propane lakes of the planet. They are well adapted to the harsh conditions of the icelands, and are exceptionally hardy, even when compared to their more temperate cousins.\n\nThey are rarely seen, even by other Kokiri, due to their isolationist lifestyle.</description>
+		</value>
+	</Operation>
 </Patch>

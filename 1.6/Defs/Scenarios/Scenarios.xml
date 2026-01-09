@@ -18,16 +18,32 @@
 					<overrideKinds>
 						<li>
 							<xenotype>VREA_AndroidAwakened</xenotype>
-							<pawnKind>Colonist</pawnKind>
+							<pawnKind>VREA_AndroidAwakened</pawnKind>
 						</li>
 					</overrideKinds>
 					<xenotypeCounts>
 						<li>
 							<xenotype>VREA_AndroidAwakened</xenotype>
 							<count>1</count>
-							<requiredAtStart>true</requiredAtStart>
+							<description>awakened android</description>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
 						</li>
 					</xenotypeCounts>
+				</li>
+				<li Class="KCSG.ScenPart_AddStartingStructure">
+					<def>VFEC_AddStartingStructure</def>
+					<structureLabel>A derelict outpost</structureLabel>
+					<spawnConduits>False</spawnConduits>
+					<nearMapCenter>True</nearMapCenter>
+					<fullClear>True</fullClear>
+					<chooseFrom>
+						<li>VREA_StartingBuildingA</li>
+						<li>VREA_StartingBuildingB</li>
+						<li>VREA_StartingBuildingC</li>
+						<li>VREA_StartingBuildingD</li>
+					</chooseFrom>
+					<spawnTheStartingPawn>True</spawnTheStartingPawn>
+					<method>Standing</method>
 				</li>
 				<li Class="ScenPart_PlayerPawnsArriveMethod">
 					<def>PlayerPawnsArriveMethod</def>
@@ -65,6 +81,16 @@
 				</li>
 				<li Class="MSSFP.ScenParts.ScenPart_PlayerHasAllResearch">
 					<def>MSSFP_PlayerHasAllResearch</def>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Gun_AssaultRifle</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Neutroamine</thingDef>
+					<count>500</count>
 				</li>
 			</parts>
 		</scenario>
