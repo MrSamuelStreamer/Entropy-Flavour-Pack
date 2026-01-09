@@ -14,6 +14,7 @@
     <ItemGroup>
         <Reference Include="Assembly-CSharp">
             <HintPath Condition="Exists('../../../../RimWorldWin64_Data')">../../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+            <HintPath Condition="Exists('../../../../RimWorldLinux_Data')">../../../../RimWorldLinux_Data/Managed/Assembly-CSharp.dll</HintPath>
             <HintPath Condition="Exists('../../../../Contents/Resources/Data/Managed')">../../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
             <Private>False</Private>
         </Reference>
@@ -44,31 +45,29 @@
         </Reference>
         <Reference Include="ResearchPapers">
             <HintPath Condition="Exists('../../../3492739424')">../../../3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath>
-            <HintPath Condition="Exists('../../../../../../workshop/content/294100/3492739424')"
-                >../../../../../../workshop/content/294100/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath
-            >
+            <HintPath Condition="Exists('../../../../../../workshop/content/294100/3492739424')">../../../../../../workshop/content/294100/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath>
             <HintPath Condition="Exists('../../../../Contents/Mods/3492739424')">../../../../Contents/Mods/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath>
-            <HintPath Condition="Exists('$(HOME)/Library/Application Support/RimWorld/Mods/3492739424')"
-                >$(HOME)/Library/Application Support/RimWorld/Mods/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath
-            >
+            <HintPath Condition="Exists('$(HOME)/Library/Application Support/RimWorld/Mods/3492739424')">$(HOME)/Library/Application Support/RimWorld/Mods/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath>
+            <HintPath Condition="Exists('$(HOME)/.local/share/Steam/steamapps/workshop/content/294100/3492739424')">$(HOME)/.local/share/Steam/steamapps/workshop/content/294100/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath>
+            <HintPath Condition="Exists('$(HOME)/Library/Application Support/RimWorld/Mods/3492739424')">$(HOME)/Library/Application Support/RimWorld/Mods/3492739424/1.6/Assemblies/ResearchPapers.dll</HintPath>
             <Private>False</Private>
         </Reference>
         <Reference Include="VFETribals">
             <HintPath Condition="Exists('../../../3079786283')">../../../3079786283/1.6/Assemblies/VFETribals.dll</HintPath>
-            <HintPath Condition="Exists('../../../../../../workshop/content/294100/3079786283')"
-                >../../../../../../workshop/content/294100/3079786283/1.6/Assemblies/VFETribals.dll</HintPath
-            >
+            <HintPath Condition="Exists('../../../../../../workshop/content/294100/3079786283')">../../../../../../workshop/content/294100/3079786283/1.6/Assemblies/VFETribals.dll</HintPath>
             <HintPath Condition="Exists('../../../../Contents/Mods/3079786283')">../../../../Contents/Mods/3079786283/1.6/Assemblies/VFETribals.dll</HintPath>
-            <HintPath Condition="Exists('$(HOME)/Library/Application Support/RimWorld/Mods/3079786283')"
-                >$(HOME)/Library/Application Support/RimWorld/Mods/3079786283/1.6/Assemblies/VFETribals.dll</HintPath
-            >
+            <HintPath Condition="Exists('$(HOME)/Library/Application Support/RimWorld/Mods/3079786283')">$(HOME)/Library/Application Support/RimWorld/Mods/3079786283/1.6/Assemblies/VFETribals.dll</HintPath>
             <Private>False</Private>
         </Reference>
     </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Lib.Harmony" Version="2.3.3" ExcludeAssets="runtime" />
     </ItemGroup>
-    <ItemGroup Condition="'@(Reference-&gt;WithMetadataValue('Identity', 'Assembly-CSharp')-&gt;Metadata('HintPath')-&gt;Exists())' == ''">
-        <PackageReference Include="Krafs.Rimworld.Ref" Version="$(RimWorldVersion).*" />
+
+    <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="$(RimWorldVersion).*"/>
     </ItemGroup>
+
 </Project>
+
