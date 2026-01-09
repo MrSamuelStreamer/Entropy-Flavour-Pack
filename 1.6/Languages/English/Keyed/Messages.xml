@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <EntropyFlavourPack_DecayLetterLabel>Research Paper Decay</EntropyFlavourPack_DecayLetterLabel>
-  <EntropyFlavourPack_DecayMessage_Damp>Damp has gotten into the knowledge stores and destroyed {0}. Its secrets have been lost to moisture and mold.</EntropyFlavourPack_DecayMessage_Damp>
-  <EntropyFlavourPack_DecayMessage_Insects>An aggressive insect hive has eaten through {0} and its secrets have been lost!</EntropyFlavourPack_DecayMessage_Insects>
-  <EntropyFlavourPack_DecayMessage_Fade>The ink on {0} has mysteriously faded beyond recognition. The knowledge it contained is now illegible.</EntropyFlavourPack_DecayMessage_Fade>
-  <EntropyFlavourPack_DecayMessage_Rodents>Rodents have nested in the archives and shredded {0} for bedding material. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents>
+    <!-- Research Paper Decay -->
+    <EntropyFlavourPack_DecayLetterLabel>Research Paper Decay</EntropyFlavourPack_DecayLetterLabel>
+    <EntropyFlavourPack_DecayMessage_Damp>Damp has gotten into the knowledge stores and destroyed {0}. Its secrets have been lost to moisture and mold.</EntropyFlavourPack_DecayMessage_Damp>
+    <EntropyFlavourPack_DecayMessage_Insects>An aggressive insect hive has eaten through {0} and its secrets have been lost!</EntropyFlavourPack_DecayMessage_Insects>
+    <EntropyFlavourPack_DecayMessage_Fade>The ink on {0} has mysteriously faded beyond recognition. The knowledge it contained is now illegible.</EntropyFlavourPack_DecayMessage_Fade>
+    <EntropyFlavourPack_DecayMessage_Rodents>Rodents have nested in the archives and shredded {0} for bedding material. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents>
+    <!-- Tech Regression System -->
+    <EntropyFlavourPack_TechRegressionTitle>Knowledge Lost - Choose Your Burden</EntropyFlavourPack_TechRegressionTitle>
+    <EntropyFlavourPack_TechRegressionDesc>Your colony's technological understanding has regressed. The loss of knowledge brings consequences. Choose which burden your people must bear.</EntropyFlavourPack_TechRegressionDesc>
+    <EntropyFlavourPack_NegativeCornerstones>Available Burdens</EntropyFlavourPack_NegativeCornerstones>
+    <EntropyFlavourPack_AcceptPenalty>Accept Burden</EntropyFlavourPack_AcceptPenalty>
+    <EntropyFlavourPack_MustChoosePenalty>You must choose a burden to bear. This window cannot be closed until you make a selection.</EntropyFlavourPack_MustChoosePenalty>
+    <EntropyFlavourPack_TechRegressionLetterLabel>Tech Regression: {0}</EntropyFlavourPack_TechRegressionLetterLabel>
+    <EntropyFlavourPack_TechRegressionLetterText>As knowledge slips away from your colony, a new burden has taken hold:\n\n{0}\n\n{1}\n\nThis penalty will persist as a consequence of your technological regression.</EntropyFlavourPack_TechRegressionLetterText>
 </LanguageData>

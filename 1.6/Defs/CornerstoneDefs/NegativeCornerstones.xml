@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Negative Cornerstones for Tech Regression -->
+    <!-- These are negative versions of VFE Tribals cornerstones, applied when tech level decreases -->
+    <!-- Movement & Physical -->
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_PathOfHeavyBurdens</defName>
+        <label>Path of Heavy Burdens</label>
+        <description>Movement speed is decreased by -0.15.</description>
+        <blurb>The people of {0} move sluggishly, weighed down by forgotten knowledge.</blurb>
+        <statOffsets>
+            <MoveSpeed>-0.15</MoveSpeed>
+        </statOffsets>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_CultOfWeakness</defName>
+        <label>Cult of Weakness</label>
+        <description>People are less resilient and their mental break threshold is increased by 5%.</description>
+        <blurb>The inhabitants of {0} are plagued by doubt and uncertainty, their minds fragile.</blurb>
+        <statOffsets>
+            <MentalBreakThreshold>0.05</MentalBreakThreshold>
+        </statOffsets>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_BreathOfDecay</defName>
+        <label>Breath of Decay</label>
+        <description>Toxic resistance is decreased by 0.3.</description>
+        <blurb>The lineage of {0} has grown weak, unable to withstand toxic environments.</blurb>
+        <statOffsets>
+            <ToxicResistance>-0.3</ToxicResistance>
+        </statOffsets>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_ForgottenTradition</defName>
+        <label>Forgotten Tradition</label>
+        <description>Learning rate of all skills is decreased by 10%.</description>
+        <blurb>Every generation in {0} learns more slowly than the last, knowledge slipping away.</blurb>
+        <statFactors>
+            <GlobalLearningFactor>0.9</GlobalLearningFactor>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_RestlessNights</defName>
+        <label>Restless Nights</label>
+        <description>Rest while sleeping is gained 10% slower.</description>
+        <blurb>Nighttime in {0} brings only fitful sleep, haunted by what was lost.</blurb>
+        <statFactors>
+            <RestRateMultiplier>0.9</RestRateMultiplier>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_FollowersOfPlagueWaters</defName>
+        <label>Followers of Plague Waters</label>
+        <description>Immunity to diseases is gained 10% slower.</description>
+        <blurb>The once-healing springs of {0} have turned foul, slowing recovery from ailments.</blurb>
+        <statFactors>
+            <ImmunityGainSpeed>0.9</ImmunityGainSpeed>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_OrderOfClumsyHands</defName>
+        <label>Order of Clumsy Hands</label>
+        <description>Injuries are healed 10% slower.</description>
+        <blurb>{0} has forgotten the traditions of skilled healers, slowing the recovery of injuries.</blurb>
+        <statFactors>
+            <InjuryHealingFactor>0.9</InjuryHealingFactor>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_CreedOfTheFragile</defName>
+        <label>Creed of the Fragile</label>
+        <description>Pain threshold, at which colonists go unconscious due to pain, is decreased by 10%.</description>
+        <blurb>Pain overwhelms {0}'s inhabitants, their tolerance weakened by regression.</blurb>
+        <statOffsets>
+            <PainShockThreshold>-0.1</PainShockThreshold>
+        </statOffsets>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_WayOfTheExhausted</defName>
+        <label>Way of the Exhausted</label>
+        <description>Need to rest depletes 10% faster.</description>
+        <blurb>{0} wastes energy, leaving them ever tired for the challenges ahead.</blurb>
+        <statFactors>
+            <RestFallRateFactor>1.10</RestFallRateFactor>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <!-- Social & Trade -->
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_DiplomatsOfFumblingTongue</defName>
+        <label>Diplomats of Fumbling Tongue</label>
+        <description>Colonists are 10% worse at negotiating.</description>
+        <blurb>Words fail the people of {0}, making them poor negotiators.</blurb>
+        <statFactors>
+            <NegotiationAbility>0.9</NegotiationAbility>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_MerchantsOfPoverty</defName>
+        <label>Merchants of Poverty</label>
+        <description>Trade prices are worsened by 5%.</description>
+        <blurb>The marketplace of {0} is known for poor and disadvantageous trade deals.</blurb>
+        <statFactors>
+            <TradePriceImprovement>0.95</TradePriceImprovement>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <!-- Work & Production -->
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_GuildOfSloth</defName>
+        <label>Guild of Sloth</label>
+        <description>Global work speed is decreased by 5%.</description>
+        <blurb>"Time is wasted," a mantra etched deep within {0}, driving them to work inefficiently.</blurb>
+        <statFactors>
+            <WorkSpeedGlobal>0.95</WorkSpeedGlobal>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_WastersOfTheVein</defName>
+        <label>Wasters of the Vein</label>
+        <description>The resource yield of mining jobs is decreased by 10%.</description>
+        <blurb>Every strike in {0}'s mines yields less, their extraction techniques forgotten.</blurb>
+        <statFactors>
+            <MiningYield>0.90</MiningYield>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_ScholarsOfRegression</defName>
+        <label>Scholars of Regression</label>
+        <description>Research speed is decreased by 5%.</description>
+        <blurb>The academic tradition of {0} crumbles, research grinding to a halt.</blurb>
+        <statFactors>
+            <ResearchSpeed>0.95</ResearchSpeed>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_NeglectersOfThePasture</defName>
+        <label>Neglecters of the Pasture</label>
+        <description>The yield of resources obtained from animal handling is decreased by 15%.</description>
+        <blurb>The bond between {0} and their livestock has weakened, reaping less from their herds.</blurb>
+        <statFactors>
+            <AnimalGatherYield>0.85</AnimalGatherYield>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_HarvestersOfBlight</defName>
+        <label>Harvesters of Blight</label>
+        <description>The resource yield of plant jobs is decreased by 10%.</description>
+        <blurb>The once-fertile lands of {0} yield less under the hands of its unskilled cultivators.</blurb>
+        <statFactors>
+            <PlantHarvestYield>0.90</PlantHarvestYield>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_MasonsOfRuin</defName>
+        <label>Masons of Ruin</label>
+        <description>The speed of construction work is decreased by 10%.</description>
+        <blurb>Structures rise slowly in {0}, a testament to the forgotten craftsmanship.</blurb>
+        <statFactors>
+            <ConstructionSpeed>0.90</ConstructionSpeed>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <!-- Medical -->
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_HealersOfSlowHand</defName>
+        <label>Healers of Slow Hand</label>
+        <description>Medical tend speed is decreased by 10%.</description>
+        <blurb>The medical artisans of {0} are known for their slow treatments, prolonging suffering.</blurb>
+        <statFactors>
+            <MedicalTendSpeed>0.90</MedicalTendSpeed>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_PhysiciansOfImprecision</defName>
+        <label>Physicians of Imprecision</label>
+        <description>Medical tend quality is worsened by 5%.</description>
+        <blurb>Through years of decline, {0}'s medical practitioners have lost their craft.</blurb>
+        <statFactors>
+            <MedicalTendQuality>0.95</MedicalTendQuality>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_SurgeonsOfFailure</defName>
+        <label>Surgeons of Failure</label>
+        <description>Medical operation speed is 15% slower.</description>
+        <blurb>The surgical theatres of {0} are dreaded, with operations dragging on interminably.</blurb>
+        <statFactors>
+            <MedicalOperationSpeed>0.85</MedicalOperationSpeed>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <!-- Combat -->
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_WarriorsOfImprecision</defName>
+        <label>Warriors of Imprecision</label>
+        <description>Chance to hit a melee attack is worsened by 5%.</description>
+        <blurb>{0}'s warriors have lost their prowess, striking wildly in close combat.</blurb>
+        <statFactors>
+            <MeleeHitChance>0.95</MeleeHitChance>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_StumblersOfTheBattlefield</defName>
+        <label>Stumblers of the Battlefield</label>
+        <description>Chance to dodge a melee attack is worsened by 5%.</description>
+        <blurb>The soldiers of {0} stumble through combat clumsily, taking enemy blows.</blurb>
+        <statFactors>
+            <MeleeDodgeChance>0.95</MeleeDodgeChance>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_Missers</defName>
+        <label>Missers</label>
+        <description>Shooting accuracy is decreased by 5%.</description>
+        <blurb>Drawing from forgotten techniques, {0}'s shooters often miss their mark.</blurb>
+        <statFactors>
+            <ShootingAccuracyPawn>0.95</ShootingAccuracyPawn>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_SlowdrawAmateurs</defName>
+        <label>Slowdraw Amateurs</label>
+        <description>Aiming a ranged weapon takes 10% more time.</description>
+        <blurb>In the heart of {0}, aiming slowly has become an unfortunate necessity.</blurb>
+        <statFactors>
+            <AimingDelayFactor>1.1</AimingDelayFactor>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <!-- Food & Resources -->
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_CulinaryDisasters</defName>
+        <label>Culinary Disasters</label>
+        <description>Chances of causing food poisoning are increased by 20%.</description>
+        <blurb>The kitchens of {0} take no care in food preparation, their meals dangerous and unappetizing.</blurb>
+        <statFactors>
+            <FoodPoisonChance>1.2</FoodPoisonChance>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_SloppyButchers</defName>
+        <label>Sloppy Butchers</label>
+        <description>Yield of resources obtained from butchering creatures is 10% lower.</description>
+        <blurb>Every creature in death is wasted in {0}, much going to rot.</blurb>
+        <statFactors>
+            <ButcheryFleshEfficiency>0.9</ButcheryFleshEfficiency>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+    <VFETribals.CornerstoneDef>
+        <defName>EFP_Negative_StinkyStreamer</defName>
+        <label>Stinky Streamer</label>
+        <description>Social impact of all colonists is decreased by 10%.</description>
+        <blurb>The people of {0} reek of forgotten knowledge and unwashed regret. Their stench precedes them, making social interactions... difficult.</blurb>
+        <statFactors>
+            <SocialImpact>0.9</SocialImpact>
+        </statFactors>
+    </VFETribals.CornerstoneDef>
+</Defs>
