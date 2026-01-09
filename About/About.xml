@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Entropy Flavour Pack</name>
-  <author>MrSamuelStreamer</author>
-  <supportedVersions>
-    <li>1.6</li>
-  </supportedVersions>
-  <packageId>mss.entropyflavourpack</packageId>
-  <modDependencies>
-    <li>
-      <packageId>brrainz.harmony</packageId>
-      <displayName>Harmony</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-    </li>
-    <li>
-      <packageId>chaoticenrico.researchpapers</packageId>
-      <displayName>Research Papers</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/3492739424</steamWorkshopUrl>
-    </li>
-  </modDependencies>
-  <loadAfter>
-    <li>brrainz.harmony</li>
-    <li>Ludeon.RimWorld</li>
-    <li>Ludeon.RimWorld.Ideology</li>
-    <li>Ludeon.RimWorld.Royalty</li>
-    <li>Ludeon.RimWorld.Biotech</li>
-    <li>Ludeon.RimWorld.Anomaly</li>
-    <li>Ludeon.RimWorld.Odyssey</li>
-    <li>chaoticenrico.researchpapers</li>
-  </loadAfter>
+    <name>Entropy Flavour Pack</name>
+    <author>MrSamuelStreamer</author>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <packageId>mss.entropyflavourpack</packageId>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+        </li>
+        <li>
+            <packageId>chaoticenrico.researchpapers</packageId>
+            <displayName>Research Papers</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/3492739424</steamWorkshopUrl>
+        </li>
+        <li>
+            <packageId>OskarPotocki.VFE.Tribals</packageId>
+            <displayName>Vanilla Factions Expanded - Tribals</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/3079786283</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>brrainz.harmony</li>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+        <li>Ludeon.RimWorld.Odyssey</li>
+        <li>chaoticenrico.researchpapers</li>
+        <li>OskarPotocki.VFE.Tribals</li>
+    </loadAfter>
 </ModMetaData>
