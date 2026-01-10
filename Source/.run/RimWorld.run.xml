@@ -4,6 +4,8 @@
     <option name="modListPath" value="" />
     <option name="saveFilePath" value="" />
     <option name="scriptName" value="$PROJECT_DIR$/../../../RimWorldLinux" />
-    <method v="2" />
+    <method v="2">
+      <option name="Build Solution" enabled="true" />
+    </method>
   </configuration>
 </component>

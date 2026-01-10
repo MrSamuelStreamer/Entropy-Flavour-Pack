@@ -5,7 +5,6 @@ using LudeonTK;
 using ResearchPapers;
 using RimWorld;
 using Verse;
-using Verse.AI;
 using VFETribals;
 
 namespace EntropyFlavourPack
@@ -25,9 +24,9 @@ namespace EntropyFlavourPack
 
         public ResearchPaperDecayComponent(Game game)
         {
-            this.nextDecayInterval = GetRandomDecayInterval();
-            this.ticksUntilNextDecay = this.nextDecayInterval;
-            this.translationKeyCollection = DefDatabase<TranslationKeyCollectionDef>.GetNamed("EntropyFlavourPack_ResearchPaperDecayMessages").translationKeys;
+            nextDecayInterval = GetRandomDecayInterval();
+            ticksUntilNextDecay = nextDecayInterval;
+            translationKeyCollection = DefDatabase<TranslationKeyCollectionDef>.GetNamed("EntropyFlavourPack_ResearchPaperDecayMessages").translationKeys;
         }
 
         private int GetRandomDecayInterval()

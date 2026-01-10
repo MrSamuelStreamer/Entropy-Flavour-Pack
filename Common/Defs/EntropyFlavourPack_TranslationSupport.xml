@@ -27,6 +27,14 @@
                 <key>EntropyFlavourPack_DecayMessage_PaperAirplane</key>
                 <weight>0.1</weight>
             </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_Solidarity</key>
+                <weight>0.1</weight>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_SmokeleafRoll</key>
+                <weight>0.1</weight>
+            </li>
         </translationKeys>
     </EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
 </Defs>
