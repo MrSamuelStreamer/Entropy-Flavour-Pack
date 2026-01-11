@@ -76,10 +76,12 @@
         </value>
     </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ResearchProjectDef[defName="VFEC_CementMaking"]/prerequisites</xpath>
+        <xpath>Defs/ResearchProjectDef[defName="VFEC_CementMaking"]</xpath>
         <value>
-            <li>MSS_Gen_Classical</li>
-        </value>
+			<prerequisites>
+				<li>MSS_Gen_Classical</li>
+			</prerequisites>
+		</value>
     </Operation>
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ResearchProjectDef[defName="VFEC_HeavyShieldMaking"]/prerequisites</xpath>
@@ -248,26 +250,22 @@
 					</researchPrerequisites>
 				</value>
 			</li>
-		</operations>
-	</Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="FT_Sandbag"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>ComplexFurniture</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="FT_WallSandbag"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>ComplexFurniture</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-	<Operation Class="PatchOperationSequence">
-		<operations>
+			<li Class="PatchOperationAdd" MayRequire="Aoba.Fortress.Industrial">
+			<xpath>Defs/ThingDef[defName="FT_WallSandbag"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ComplexFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Aoba.Fortress.Industrial">
+			<xpath>Defs/ThingDef[defName="FT_Sandbag"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>ComplexFurniture</li>
+					</researchPrerequisites>
+				</value>
+			</li>
 			<li Class="PatchOperationAdd" MayRequire="Alias.Doormats">
 			<xpath>Defs/ThingDef[defName="Alias_DoorMatSmall"]</xpath>
 				<value>
