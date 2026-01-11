@@ -230,22 +230,26 @@
             </researchPrerequisites>
         </value>
     </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="BOR_Telescope_II"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>BOR_Research_Joy_II</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="BOR_Telescope_III"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>BOR_Research_Joy_III</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd" MayRequire="bambaryla.bor">
+			<xpath>Defs/ThingDef[defName="BOR_Telescope_II"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>BOR_Research_Joy_II</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="bambaryla.bor">
+			<xpath>Defs/ThingDef[defName="BOR_Telescope_II"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>BOR_Research_Joy_II</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+		</operations>
+	</Operation>
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="FT_Sandbag"]</xpath>
         <value>
@@ -262,46 +266,42 @@
             </researchPrerequisites>
         </value>
     </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="Alias_DoorMatSmall"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>CarpetMaking</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="Alias_DoorMatMedium"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>CarpetMaking</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="Alias_DoorMatLarge"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>CarpetMaking</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="Alias_DoorMatLinked"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>CarpetMaking</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="Alias_DoorMatLinked"]</xpath>
-        <value>
-            <researchPrerequisites>
-                <li>CarpetMaking</li>
-            </researchPrerequisites>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd" MayRequire="Alias.Doormats">
+			<xpath>Defs/ThingDef[defName="Alias_DoorMatSmall"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>CarpetMaking</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Alias.Doormats">
+			<xpath>Defs/ThingDef[defName="Alias_DoorMatMedium"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>CarpetMaking</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Alias.Doormats">
+			<xpath>Defs/ThingDef[defName="Alias_DoorMatLarge"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>CarpetMaking</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Alias.Doormats">
+			<xpath>Defs/ThingDef[defName="Alias_DoorMatLinked"]</xpath>
+				<value>
+					<researchPrerequisites>
+						<li>CarpetMaking</li>
+					</researchPrerequisites>
+				</value>
+			</li>
+		</operations>
+	</Operation>
     <!-- All the Blue Archive Stuff -->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="Classic_Light_Table"]</xpath>
