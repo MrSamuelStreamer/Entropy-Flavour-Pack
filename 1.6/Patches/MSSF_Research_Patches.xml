@@ -241,10 +241,10 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd" MayRequire="bambaryla.bor">
-			<xpath>Defs/ThingDef[defName="BOR_Telescope_II"]</xpath>
+			<xpath>Defs/ThingDef[defName="BOR_Telescope_III"]</xpath>
 				<value>
 					<researchPrerequisites>
-						<li>BOR_Research_Joy_II</li>
+						<li>BOR_Research_Joy_III</li>
 					</researchPrerequisites>
 				</value>
 			</li>
