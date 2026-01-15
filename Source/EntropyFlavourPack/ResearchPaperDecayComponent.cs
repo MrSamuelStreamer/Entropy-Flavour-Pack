@@ -4,6 +4,7 @@ using EntropyFlavourPack.Defs;
 using LudeonTK;
 using ResearchPapers;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 using VFETribals;
 
@@ -12,10 +13,7 @@ namespace EntropyFlavourPack
     public class ResearchPaperDecayComponent : GameComponent
     {
         public List<StringChance> translationKeyCollection;
-
-        private const int MinDaysBetweenDecay = 10;
-        private const int MaxDaysBetweenDecay = 15;
-        private const int TicksPerDay = 60000;
+        public List<StringChance> multiTranslationKeyCollection;
 
         private int ticksUntilNextDecay;
         private int nextDecayInterval;
@@ -27,11 +25,12 @@ namespace EntropyFlavourPack
             nextDecayInterval = GetRandomDecayInterval();
             ticksUntilNextDecay = nextDecayInterval;
             translationKeyCollection = DefDatabase<TranslationKeyCollectionDef>.GetNamed("EntropyFlavourPack_ResearchPaperDecayMessages").translationKeys;
+            multiTranslationKeyCollection = DefDatabase<TranslationKeyCollectionDef>.GetNamed("EntropyFlavourPack_ResearchPaperDecayMessagesMulti").translationKeys;
         }
 
         private int GetRandomDecayInterval()
         {
-            return Rand.RangeInclusive(MinDaysBetweenDecay, MaxDaysBetweenDecay) * TicksPerDay;
+            return EntropyFlavourPackMod.settings.DaysBetweenDecay.RandomInRange * GenDate.TicksPerDay;
         }
 
         public override void FinalizeInit()
@@ -60,9 +59,9 @@ namespace EntropyFlavourPack
                 TryShowNegativeCornerstoneWindow();
         }
 
-        private string GetRandomDecayMessage(string paperLabel, Pawn nearbyPawn)
+        private string GetRandomDecayMessage(string paperLabel, Pawn nearbyPawn, bool multi = false)
         {
-            string randomKey = translationKeyCollection.RandomElementByWeight(el=>el.weight).key;
+            string randomKey = (multi ? multiTranslationKeyCollection : translationKeyCollection).RandomElementByWeight(el=>el.weight).key;
             return randomKey.Translate(paperLabel, nearbyPawn.Named("PAWN")).ToString();
         }
 
@@ -130,22 +129,45 @@ namespace EntropyFlavourPack
             if (highestTechPapers.Count == 0)
                 return;
 
-            Thing paperToDestroy = highestTechPapers.RandomElement();
-            if (paperToDestroy == null)
+            List<Thing> papersToDestroy = highestTechPapers.InRandomOrder().Take(EntropyFlavourPackMod.settings.TechToDestroyAtATime.RandomInRange).ToList();
+
+            if(papersToDestroy.Count == 0)
                 return;
 
-            Pawn nearbyPawn = paperToDestroy.Map.mapPawns.FreeColonistsSpawned.OrderBy(p => p.Position.DistanceTo(paperToDestroy.Position)).FirstOrDefault() ?? paperToDestroy.Map.mapPawns.FreeColonistsSpawned.RandomElement();
+            Pawn nearbyPawn = papersToDestroy.First().Map.mapPawns.FreeColonistsSpawned.OrderBy(p => p.Position.DistanceTo(papersToDestroy.First().Position)).FirstOrDefault() ?? papersToDestroy.First().Map.mapPawns.FreeColonistsSpawned.RandomElement();
+            TechLevel destroyedPaperTechLevel;
 
-            string paperLabel = paperToDestroy.Label;
-            Map paperMap = paperToDestroy.Map;
-            TechLevel destroyedPaperTechLevel = GetPaperTechLevel(paperToDestroy);
+            if (papersToDestroy.Count == 1)
+            {
+                Thing paperToDestroy = papersToDestroy.First();
+                string paperLabel = paperToDestroy.Label;
+                Map paperMap = paperToDestroy.Map;
+                destroyedPaperTechLevel = GetPaperTechLevel(paperToDestroy);
 
-            paperToDestroy.Destroy(DestroyMode.Vanish);
+                paperToDestroy.Destroy(DestroyMode.Vanish);
 
-            string letterLabel = "EntropyFlavourPack_DecayLetterLabel".Translate();
-            string letterText = GetRandomDecayMessage(paperLabel, nearbyPawn);
+                string letterLabel = "EntropyFlavourPack_DecayLetterLabel".Translate();
+                string letterText = GetRandomDecayMessage(paperLabel, nearbyPawn);
 
-            Find.LetterStack.ReceiveLetter(letterLabel, letterText, LetterDefOf.NegativeEvent, new LookTargets(paperToDestroy.Position, paperMap));
+                Find.LetterStack.ReceiveLetter(letterLabel, letterText, LetterDefOf.NegativeEvent, new LookTargets(paperToDestroy.Position, paperMap));
+            }
+            else
+            {
+                destroyedPaperTechLevel = papersToDestroy.Select(GetPaperTechLevel).Min();
+
+                List<string> labels = papersToDestroy.Select(p => p.Label).ToList();
+                string commaSeparatedLabels = string.Join(", ", labels);
+
+                foreach (Thing thing in papersToDestroy)
+                {
+                    thing.Destroy(DestroyMode.Vanish);
+                }
+
+                string letterLabel = "EntropyFlavourPack_DecayLetterLabel".Translate();
+                string letterText = GetRandomDecayMessage(commaSeparatedLabels, nearbyPawn, true);
+
+                Find.LetterStack.ReceiveLetter(letterLabel, letterText, LetterDefOf.NegativeEvent, new LookTargets(papersToDestroy.Select(p=>new GlobalTargetInfo(p.Position, p.Map))));
+            }
 
             CheckForTechRegression(destroyedPaperTechLevel);
         }

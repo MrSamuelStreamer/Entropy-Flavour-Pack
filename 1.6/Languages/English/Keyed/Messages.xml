@@ -12,6 +12,12 @@
     <EntropyFlavourPack_DecayMessage_Solidarity>{PAWN_nameDef} was gripped by a sudden fervor for the proletariat. Declaring "{0}" to be a product of bourgeois decadence, {PAWN_pronoun} burned the document in a defiant act of solidarity with the working class.</EntropyFlavourPack_DecayMessage_Solidarity>
     <EntropyFlavourPack_DecayMessage_SmokeleafRoll>{PAWN_nameDef} was desperate for a hit of smokeleaf and, lacking proper papers, decided that "{0}" looked like the perfect substitute. {PAWN_pronoun} rolled a massive joint with the research, and the colony's progress went up in a thick, fragrant cloud of smoke.</EntropyFlavourPack_DecayMessage_SmokeleafRoll>
 
+    <!-- Research Paper Decay (Multiple) -->
+    <EntropyFlavourPack_DecayMessage_DampMulti>Damp has gotten into the knowledge stores and destroyed {0}. Their secrets have been lost to moisture and mold.</EntropyFlavourPack_DecayMessage_DampMulti>
+    <EntropyFlavourPack_DecayMessage_InsectsMulti>An aggressive insect hive has eaten through many documents: {0}.\nTheir secrets have been lost!</EntropyFlavourPack_DecayMessage_InsectsMulti>
+    <EntropyFlavourPack_DecayMessage_RodentsMulti>Rodents have nested in the archives and shredded many documents for bedding material: {0}.\nThe knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_RodentsMulti>
+    <EntropyFlavourPack_DecayMessage_ShotMulti>A stray shot from {PAWN_nameDef}'s gun as they were carelessly twirling it around their finger shredded {0}. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_ShotMulti>
+
     <!-- Tech Regression System -->
     <EntropyFlavourPack_TechRegressionTitle>Knowledge Lost - Choose Your Burden</EntropyFlavourPack_TechRegressionTitle>
     <EntropyFlavourPack_TechRegressionDesc>Your colony's technological understanding has regressed. The loss of knowledge brings consequences. Choose which burden your people must bear.</EntropyFlavourPack_TechRegressionDesc>
@@ -20,4 +26,9 @@
     <EntropyFlavourPack_MustChoosePenalty>You must choose a burden to bear. This window cannot be closed until you make a selection.</EntropyFlavourPack_MustChoosePenalty>
     <EntropyFlavourPack_TechRegressionLetterLabel>Tech Regression: {0}</EntropyFlavourPack_TechRegressionLetterLabel>
     <EntropyFlavourPack_TechRegressionLetterText>As knowledge slips away from your colony, a new burden has taken hold:\n\n{0}\n\n{1}\n\nThis penalty will persist as a consequence of your technological regression.</EntropyFlavourPack_TechRegressionLetterText>
+
+    <EntropyFlavourPack_SettingsCategory>Entropy Flavour Pack Settings</EntropyFlavourPack_SettingsCategory>
+    <EntropyFlavourPack_DaysBetweenDecay>Days Between Decay</EntropyFlavourPack_DaysBetweenDecay>
+    <EntropyFlavourPack_TechToDestroyAtATime>Tech To Destroy At A Time</EntropyFlavourPack_TechToDestroyAtATime>
+
 </LanguageData>

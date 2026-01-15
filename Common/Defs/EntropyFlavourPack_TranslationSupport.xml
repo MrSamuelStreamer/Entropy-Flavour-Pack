@@ -37,4 +37,22 @@
             </li>
         </translationKeys>
     </EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
+    <EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
+        <defName>EntropyFlavourPack_ResearchPaperDecayMessagesMulti</defName>
+        <translationKeys>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_DampMulti</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_InsectsMulti</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_RodentsMulti</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_ShotMulti</key>
+                <weight>0.1</weight>
+            </li>
+        </translationKeys>
+    </EntropyFlavourPack.Defs.TranslationKeyCollectionDef>
 </Defs>
