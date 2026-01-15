@@ -4,6 +4,18 @@
         <defName>EntropyFlavourPack_ResearchPaperDecayMessages</defName>
         <translationKeys>
             <li>
+                <key>EntropyFlavourPack_DecayMessage_AI</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_polarity</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_recorded_over</key>
+            </li>
+            <li>
+                <key>EntropyFlavourPack_DecayMessage_not_safely</key>
+            </li>
+            <li>
                 <key>EntropyFlavourPack_DecayMessage_Damp</key>
             </li>
             <li>

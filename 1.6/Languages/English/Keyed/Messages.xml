@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
     <!-- Research Paper Decay -->
-    <EntropyFlavourPack_DecayLetterLabel>Research Paper Decay</EntropyFlavourPack_DecayLetterLabel>
+    
+    <EntropyFlavourPack_DecayLetterLabel>Research Core Decay</EntropyFlavourPack_DecayLetterLabel>
+    <EntropyFlavourPack_DecayMessage_Damp>An OS update has destabilised {0}. Its secrets have been lost!</EntropyFlavourPack_DecayMessage_Damp>
+    <EntropyFlavourPack_DecayMessage_Insects>A quantum tunneling incident has resulted in {0} being destroyed!</EntropyFlavourPack_DecayMessage_Insects>
+    <EntropyFlavourPack_DecayMessage_AI>A malicious Archo-being has targeted {0} and wiped the data within!</EntropyFlavourPack_DecayMessage_AI>
+    <EntropyFlavourPack_DecayMessage_polarity>An isometric polarity shift has destabilised {0} and wiped the data within!</EntropyFlavourPack_DecayMessage_polarity>
+    <EntropyFlavourPack_DecayMessage_recorded_over>Through unknown means, the data on {0} has been overwritten with footage of ancient televsion programs!</EntropyFlavourPack_DecayMessage_recorded_over>
+    <EntropyFlavourPack_DecayMessage_not_safely>{0} was not safely ejected last time it was used and the data has been corrupted.</EntropyFlavourPack_DecayMessage_not_safely>
+    <EntropyFlavourPack_DecayMessage_Fade>A solar flare has destabilised {0}! The knowledge it contained is now lost.</EntropyFlavourPack_DecayMessage_Fade>
+    <EntropyFlavourPack_DecayMessage_Rodents>An ancient virus predating the colony has been discovered on {0}. It has been safely destroyed so the virus cannot spread, however the knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents>
+    <!-- Commented out for flavour reasons only, will be restored later on -->
+    <!-- <EntropyFlavourPack_DecayLetterLabel>Research Paper Decay</EntropyFlavourPack_DecayLetterLabel>
     <EntropyFlavourPack_DecayMessage_Damp>Damp has gotten into the knowledge stores and destroyed {0}. Its secrets have been lost to moisture and mold.</EntropyFlavourPack_DecayMessage_Damp>
     <EntropyFlavourPack_DecayMessage_Insects>An aggressive insect hive has eaten through {0} and its secrets have been lost!</EntropyFlavourPack_DecayMessage_Insects>
     <EntropyFlavourPack_DecayMessage_Fade>The ink on {0} has mysteriously faded beyond recognition. The knowledge it contained is now illegible.</EntropyFlavourPack_DecayMessage_Fade>
-    <EntropyFlavourPack_DecayMessage_Rodents>Rodents have nested in the archives and shredded {0} for bedding material. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents>
+    <EntropyFlavourPack_DecayMessage_Rodents>Rodents have nested in the archives and shredded {0} for bedding material. The knowledge is irretrievably lost.</EntropyFlavourPack_DecayMessage_Rodents> -->
+    <!-- Commented out for flavour reasons only, will be restored later on -->
     <EntropyFlavourPack_DecayMessage_CleanUpSpill>{PAWN_nameDef} spilled {PAWN_possessive} drink near a bookshelf. In {PAWN_possessive} haste, {PAWN_pronoun} used "{0}" to soak up the spill, rendering it unreadable.</EntropyFlavourPack_DecayMessage_CleanUpSpill>
     <EntropyFlavourPack_DecayMessage_TP>{PAWN_nameDef} was caught short. In {PAWN_possessive} haste, {PAWN_pronoun} grabbed "{0}" to wipe with, leaving it a smeared useless mess.</EntropyFlavourPack_DecayMessage_TP>
     <EntropyFlavourPack_DecayMessage_PaperAirplane>{PAWN_nameDef} was making paper airplanes. While not paying attention, {PAWN_pronoun} grabbed "{0}". The plane flew straight out the window and into a dirty puddle, soaking away any ink and leaving it blank and muddy.</EntropyFlavourPack_DecayMessage_PaperAirplane>
