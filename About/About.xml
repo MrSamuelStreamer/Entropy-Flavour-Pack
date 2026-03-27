@@ -34,5 +34,7 @@
         <li>Ludeon.RimWorld.Odyssey</li>
         <li>chaoticenrico.researchpapers</li>
         <li>OskarPotocki.VFE.Tribals</li>
+        <li>OskarPotocki.VFE.Classical</li>
+        <li>Seanbeag.VFECTechRebalance</li>
     </loadAfter>
 </ModMetaData>
